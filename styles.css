@@ -1,0 +1,113 @@
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --muted:#9aa4b2;
+  --accent:#ff6b9a;
+  --accent-2:#7c3aed;
+  --glass: rgba(255,255,255,0.04);
+  --radius:14px;
+  --max-width:1100px;
+  --font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:var(--font);
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(124,58,237,0.12), transparent),
+              linear-gradient(180deg, #071021 0%, #081127 100%);
+  color:#e6eef8;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.nav{
+  position:sticky;
+  top:0;
+  backdrop-filter: blur(6px);
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-bottom:1px solid rgba(255,255,255,0.03);
+}
+.nav-inner{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:18px 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.brand{
+  font-weight:800;
+  letter-spacing:-0.02em;
+  color:var(--accent);
+  text-decoration:none;
+  font-size:20px;
+}
+.links{display:flex;gap:18px;align-items:center}
+.links a{color:var(--muted);text-decoration:none}
+.links .cta{padding:8px 12px;background:linear-gradient(90deg,var(--accent),var(--accent-2));border-radius:8px;color:white;text-decoration:none}
+
+/* Hero */
+.hero{
+  max-width:var(--max-width);
+  margin:48px auto;
+  display:flex;
+  gap:40px;
+  padding:40px;
+  align-items:center;
+}
+.hero-left{flex:1}
+.hero-right{width:360px;flex:0 0 360px}
+.hero h1{font-size:44px;margin:0 0 12px;line-height:1.02}
+.sub{color:var(--muted);margin:0 0 20px}
+.hero-cta{display:flex;gap:12px;margin-bottom:18px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:10px;border:0;cursor:pointer;text-decoration:none}
+.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;box-shadow:0 8px 30px rgba(124,58,237,0.18)}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+.trust{margin-top:12px;color:var(--muted)}
+.logos{display:flex;gap:10px;margin-top:8px}
+.logo{background:var(--glass);color:var(--muted);padding:6px 10px;border-radius:8px;font-size:13px}
+
+.avatar-frame{position:relative;width:320px;height:320px;border-radius:20px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));display:flex;align-items:center;justify-content:center;box-shadow:0 20px 60px rgba(8,12,20,0.6)}
+.hero-avatar{width:260px;height:260px;border-radius:50%;object-fit:cover;object-position:50% 40%;border:6px solid rgba(255,255,255,0.06)}
+.avatar-badge{position:absolute;left:16px;bottom:14px;background:rgba(0,0,0,0.45);padding:8px 12px;border-radius:999px;font-size:12px;color:var(--muted)}
+
+/* Features */
+.features{max-width:var(--max-width);margin:36px auto;padding:36px 24px}
+.features h2{margin:0 0 8px}
+.features .lead{color:var(--muted);margin-bottom:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.015), transparent);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+.card h3{margin:0 0 8px}
+.card p{margin:0;color:var(--muted)}
+
+/* Pricing */
+.pricing{max-width:var(--max-width);margin:36px auto;padding:36px 24px}
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.price-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:20px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);text-align:center}
+.price-card.featured{transform:translateY(-6px);box-shadow:0 30px 50px rgba(124,58,237,0.12)}
+.price{font-size:28px;margin:10px 0}
+.price span{font-size:14px;color:var(--muted)}
+
+/* CTA */
+.cta-section{max-width:var(--max-width);margin:36px auto;padding:36px 24px;text-align:center}
+.signup-form{display:flex;gap:12px;justify-content:center;margin-top:14px}
+.signup-form input{padding:12px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit;width:320px}
+
+.footer{margin-top:40px;padding:22px 0;border-top:1px solid rgba(255,255,255,0.03)}
+.foot-inner{max-width:var(--max-width);margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;color:var(--muted)}
+.foot-links a{color:var(--muted);text-decoration:none;margin-left:12px}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero{flex-direction:column;align-items:stretch;padding:24px}
+  .hero-right{width:100%;order:-1;display:flex;justify-content:center}
+  .hero-left{text-align:center}
+  .signup-form{flex-direction:column}
+}
+
+/* small flourish animation */
+@keyframes bob {0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+.avatar-frame{animation:bob 6s ease-in-out infinite}

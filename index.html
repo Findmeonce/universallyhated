@@ -1,82 +1,146 @@
 <!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peter Griffin Love</title>
-    <style>
-        body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #ffd6e6;
-            font-family: Arial, sans-serif;
-            overflow: hidden;
-        }
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Peterfy — Turn everything into Peter Griffin</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <meta name="description" content="Peterfy — a playful SaaS that turns text, images and APIs into Peter Griffin. Try the Peterfy API, integrations, and one-click transforms.">
+    </head>
+    <body>
+        <header class="nav">
+            <div class="nav-inner">
+                <a class="brand" href="#">Peterfy</a>
+                <nav class="links">
+                    <a href="#features">Features</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#docs">Docs</a>
+                    <a class="cta" href="#signup">Get Started</a>
+                </nav>
+            </div>
+        </header>
 
-        .container {
-            position: relative;
-            text-align: center;
-        }
+        <main>
+            <section class="hero">
+                <div class="hero-left">
+                    <h1>Turn everything into Peter Griffin</h1>
+                    <p class="sub">Peterfy is a playful, powerful SaaS and API that transforms text, images and apps into Peter Griffin — at scale, instantly, and with delightful results.</p>
 
-        .peter-image {
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            object-fit: cover;
-            /* move the image content down so Peter's face sits centered in the circular crop */
-            object-position: 50% 35%;
-            display: block;
-            border: 5px solid #ff69b4;
-            box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
-        }
+                    <div class="hero-cta">
+                        <a class="btn primary" href="#signup">Start Free Trial</a>
+                        <a class="btn ghost" href="#features">See Features</a>
+                    </div>
 
-        .heart {
-            position: absolute;
-            font-size: 2em;
-            color: #ff69b4;
-            animation: float 3s ease-in-out infinite;
-        }
+                    <div class="trust">
+                        <span>Trusted by devs at</span>
+                        <div class="logos">
+                            <div class="logo">GriffCo</div>
+                            <div class="logo">Family Apps</div>
+                            <div class="logo">ToonHub</div>
+                        </div>
+                    </div>
+                </div>
 
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-20px);
-            }
-        }
+                <div class="hero-right">
+                    <div class="avatar-frame">
+                        <img class="hero-avatar" src="https://upload.wikimedia.org/wikipedia/en/c/c2/Peter_Griffin.png" alt="Peter Griffin avatar">
+                        <div class="avatar-badge">API · Images · Text</div>
+                    </div>
+                </div>
+            </section>
 
-        h1 {
-            color: #ff69b4;
-            margin-top: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <img src="https://upload.wikimedia.org/wikipedia/en/c/c2/Peter_Griffin.png" alt="Peter Griffin" class="peter-image">
-        <h1>Peter Griffin ❤️</h1>
-        <script>
-            function createHearts() {
-                const container = document.querySelector('.container');
-                const hearts = ['❤️', '💖', '💝', '💗', '💓'];
-                
-                for (let i = 0; i < 12; i++) {
-                    const heart = document.createElement('div');
-                    heart.className = 'heart';
-                    heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
-                    heart.style.left = Math.random() * 100 + '%';
-                    heart.style.top = Math.random() * 100 + '%';
-                    heart.style.animationDelay = Math.random() * 2 + 's';
-                    container.appendChild(heart);
-                }
-            }
-            createHearts();
-        </script>
-    </div>
+            <section id="features" class="features">
+                <h2>What Peterfy does</h2>
+                <p class="lead">A collection of transform tools that make everything a little more Peter.</p>
+
+                <div class="grid">
+                    <article class="card">
+                        <h3>Text → Peter</h3>
+                        <p>Convert any copy into Peter Griffin's voice and style. Blog posts, tweets, product descriptions — all with a comedic Peter twist.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Images → Peter</h3>
+                        <p>Transform images into stylized Peter-themed art and avatars. Perfect for marketing, avatars, or just for fun.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>API & Integrations</h3>
+                        <p>Simple REST API, SDKs, and plugins so you can Peterfy content directly inside your app or pipeline.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>One-Click Plugins</h3>
+                        <p>Browser extensions and design plugins to Peterfy text/images with one click — great for teams and creators.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="pricing" class="pricing">
+                <h2>Simple pricing</h2>
+                <div class="pricing-grid">
+                    <div class="price-card">
+                        <h3>Free</h3>
+                        <p class="price">$0</p>
+                        <ul>
+                            <li>100 transforms / month</li>
+                            <li>Community support</li>
+                            <li>Access to basic API</li>
+                        </ul>
+                        <a class="btn primary" href="#signup">Get Free</a>
+                    </div>
+
+                    <div class="price-card featured">
+                        <h3>Pro</h3>
+                        <p class="price">$19<span>/mo</span></p>
+                        <ul>
+                            <li>10k transforms / month</li>
+                            <li>Priority support</li>
+                            <li>Commercial license</li>
+                        </ul>
+                        <a class="btn primary" href="#signup">Start Pro</a>
+                    </div>
+
+                    <div class="price-card">
+                        <h3>Enterprise</h3>
+                        <p class="price">Custom</p>
+                        <ul>
+                            <li>Custom limits</li>
+                            <li>Dedicated support</li>
+                            <li>SLAs & onboarding</li>
+                        </ul>
+                        <a class="btn ghost" href="#contact">Contact Sales</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="signup" class="cta-section">
+                <h2>Ready to Peterfy your world?</h2>
+                <p>Sign up and get access to the API keys, SDKs, and one-click plugins.</p>
+                <form class="signup-form" onsubmit="handleSignup(event)">
+                    <input type="email" id="email" placeholder="you@company.com" required>
+                    <button class="btn primary" type="submit">Start Free Trial</button>
+                </form>
+            </section>
+
+        </main>
+
+        <footer class="footer">
+            <div class="foot-inner">
+                <div>© <strong>Peterfy</strong> — Made with love and chaos.</div>
+                <div class="foot-links">
+                    <a href="#docs">Docs</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
 </body>
 </html>
